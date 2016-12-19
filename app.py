@@ -1,18 +1,18 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
 @app.route('/present')
 def present():
-	return 'present' 
+	return render_template('present.html')
 
 @app.route('/past')
 def past():
-	return 'past'
+	return render_template('past.html')
 
 @app.route('/future')
 def future():
-	return 'future'
+	return render_template('future.html')
 
 if __name__ == '__main__':
 	app.run()
