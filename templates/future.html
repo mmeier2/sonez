@@ -1,2 +1,13 @@
-<title>Future</title>
-<h1>Future</h1>
+{% extends "base.html" %}
+{% block title %}Sonez{% endblock %}
+
+{% block content %}
+<h1>Sonez Future</h1>
+
+<script>
+$(document).ready(function() {
+	$('li').removeClass('active');
+	$('#future_li').addClass('active');
+});
+</script>
+{% endblock %}

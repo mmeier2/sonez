@@ -1,0 +1,77 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'boostrap@3' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose cache add [ 'boostrap@3', null ]
+5 verbose cache add name=undefined spec="boostrap@3" args=["boostrap@3",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'boostrap@3',
+6 verbose parsed url   path: 'boostrap@3',
+6 verbose parsed url   href: 'boostrap@3' }
+7 verbose cache add name="boostrap" spec="3" args=["boostrap","3"]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '3',
+8 verbose parsed url   path: '3',
+8 verbose parsed url   href: '3' }
+9 verbose addNamed [ 'boostrap', '3' ]
+10 verbose addNamed [ null, '>=3.0.0-0 <4.0.0-0' ]
+11 silly lockFile dec727d2-boostrap-3 boostrap@3
+12 verbose lock boostrap@3 /Users/maddisonmeier/.npm/dec727d2-boostrap-3.lock
+13 silly addNameRange { name: 'boostrap', range: '>=3.0.0-0 <4.0.0-0', hasData: false }
+14 verbose url raw boostrap
+15 verbose url resolving [ 'https://registry.npmjs.org/', './boostrap' ]
+16 verbose url resolved https://registry.npmjs.org/boostrap
+17 info trying registry request attempt 1 at 14:27:30
+18 http GET https://registry.npmjs.org/boostrap
+19 http 404 https://registry.npmjs.org/boostrap
+20 silly registry.get cb [ 404,
+20 silly registry.get   { 'content-type': 'application/json',
+20 silly registry.get     'cache-control': 'max-age=0',
+20 silly registry.get     'content-length': '2',
+20 silly registry.get     'accept-ranges': 'bytes',
+20 silly registry.get     date: 'Mon, 19 Dec 2016 22:27:31 GMT',
+20 silly registry.get     via: '1.1 varnish',
+20 silly registry.get     age: '0',
+20 silly registry.get     connection: 'keep-alive',
+20 silly registry.get     'x-served-by': 'cache-lax8636-LAX',
+20 silly registry.get     'x-cache': 'MISS',
+20 silly registry.get     'x-cache-hits': '0',
+20 silly registry.get     'x-timer': 'S1482186451.177346,VS0,VE338',
+20 silly registry.get     vary: 'Accept-Encoding' } ]
+21 silly addNameRange number 2 { name: 'boostrap', range: '>=3.0.0-0 <4.0.0-0', hasData: true }
+22 silly addNameRange versions [ undefined, [] ]
+23 error TypeError: Cannot read property 'latest' of undefined
+23 error     at next (/usr/local/lib/node_modules/npm/lib/cache.js:744:35)
+23 error     at /usr/local/lib/node_modules/npm/lib/cache.js:732:5
+23 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:148:7)
+23 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:133:7
+23 error     at Object.oncomplete (fs.js:107:15)
+24 error If you need help, you may report this *entire* log,
+24 error including the npm and node versions, at:
+24 error     <http://github.com/npm/npm/issues>
+25 error System Darwin 14.5.0
+26 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "boostrap@3"
+27 error cwd /Users/maddisonmeier/Documents/Projects/sonez
+28 error node -v v0.10.26
+29 error npm -v 1.4.3
+30 error type non_object_property_load
+31 verbose exit [ 1, true ]

@@ -1,2 +1,13 @@
-<title>Past</title>
-<h1>Past</h1>
+{% extends "base.html" %}
+{% block title %}Sonez{% endblock %}
+
+
+{% block content %}
+<h1>Sonez Past</h1>
+<script>
+$(document).ready(function() {
+	$('li').removeClass('active');
+	$('#past_li').addClass('active');
+});
+</script>
+{% endblock %}
