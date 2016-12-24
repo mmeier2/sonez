@@ -17,12 +17,33 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Abel";
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.09375em;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+.about {
+    text-align: center;
+    letter-spacing: .4px;
+    line-height: 1.7em;
+    text-transform: none;
+    margin-bottom: 20px;
 }
 
 .topnav {
     font-size: 14px; 
+    text-transform: uppercase;
+    letter-spacing: 0.09375em;
 }
 
 .lead {
@@ -36,17 +57,18 @@ h6 {
     color: #f8f8f8;
     background: url(../img/geobackground.jpg) no-repeat center center;
     background-size: cover;
+    min-height: 45em;
 }
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 15%;
+    /*padding-bottom: 20%;*/
 }
 
 .intro-message > h1 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
     font-size: 5em;
 }
 
@@ -104,6 +126,9 @@ h6 {
 
 .section-heading {
     margin-bottom: 30px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.09375em;
 }
 
 .section-heading-spacer {
@@ -115,13 +140,13 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    /*background: url(../img/banner-bg.jpg) no-repeat center center;*/
     background-size: cover;
+    background-color: black;
 }
 
 .banner h2 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 3em;
 }
 
@@ -130,7 +155,7 @@ h6 {
 }
 
 .banner-social-buttons {
-    float: right;
+    float: left;
     margin-top: 0;
 }
 
@@ -167,3 +192,9 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+/*FAQS*/
+#faqs h3    { cursor:pointer; }
+#faqs h3.active { color:#d74646; }
+#faqs div { height:0; overflow:hidden; position:relative; }
+#faqs div p { padding:0; margin-bottom:15px; }

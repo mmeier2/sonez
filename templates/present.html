@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Sonez{% endblock %}
 {% block head %}
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"> 
-<link href="css/bootstrap3_player.css" rel="stylesheet">
+<!--     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">     --> <!-- this is lagging hard -->
+    <link href="css/bootstrap3_player.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel:400|Source+Code+Pro:200,300,400,500,600,700,900"/>
  {% endblock %}
 
 {% block content %}
@@ -14,42 +15,74 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>I Am Sonez</h1>
-                        <h3>"some saying"</h3>
+                        <h1>Sonez</h1>
+                        <!-- <h3>Bullet</h3> -->
+
      
       
 
+<!-- <div class="row col-md-8 col-md-offset-2 col-xs-12">
+   <audio controls
+	data-info-album-art="img/bullet.jpg"
+	data-info-album-title="8874"
+	data-info-artist="Sonez"
+	data-info-title="Bullet"
+	data-info-year="2016">
+	 <source src="mp3/Bullet Mix Session V1.mp3" type="audio/mpeg" /> -->
+	<!-- <a href="mp3/Bullet Mix Session V1.mp3">Bullet</a> -->
+<!-- </audio> -->
+    <!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  -->
+    <!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  -->
 
-        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Example: Audio with data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-      <audio controls
-          data-info-album-art="img/studio.jpg"
-          data-info-album-title=""
-          data-info-artist="Sonia Mehta"
-          data-info-title="-"
-          data-info-label="Independent"
-          data-info-year="2016"
-          data-info-att=""
-          data-info-att-link="https://github.com/iainhouston">
-          <source src="http://playerdemo.iainhouston.com/tests/BeBopAliens.ogg" type="audio/ogg" />
-          <source src="http://playerdemo.iainhouston.com/tests/BeBopAliens.mp3" type="audio/mpeg" />
-          <a href="http://playerdemo.iainhouston.com/tests/BeBopAliens.mp3">BeBopAliens</a>
-          An html5-capable browser is required to play this audio. 
-        </audio>
-    </div>
+      </div><!-- /row -->
     <!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  -->
     <!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  -->
 
                   
 
         <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://www.instagram.com/singformesonia/" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
-                            </li>
-                            <li>
-                                <a href="https://soundcloud.com/iamsonez" class="btn btn-default btn-lg"><i class="fa fa-soundcloud fa-fw"></i> <span class="network-name">SoundCloud</span></a>
+        <h3 class ="about"> Hey there! Thanks for checking out my website. I figure you might not know a lot about me, so here are some FAQs: </h3>
+        	<ul class="list-inline intro-social-buttons">
+                            <li >
+                                <a id="faq_button" style="padding-right:1em; padding-left:1em;"class="btn btn-default btn-lg"><span><i id="faq_img" class="fa fa-sort-desc"></i></span></a>
                             </li>
                         </ul>
+
+                        <div class="about" id="faqs_container" style="display:none">
+                        	<h3>Who are you?</h3>
+							<div>
+								<p>I am Sonez.</p>
+							</div>
+							<h3>Where are you from?</h3>
+							<div>
+								<p>Born and raised in Ohio, now living that West Coast life ;)</p>
+							</div>
+							<h3>What do you do?</h3>
+							<div>
+								<p>I work in finance by day and make music at night.</p>
+							</div>
+							<h3>Why do you make music?</h3>
+							<div>
+								<p>Simple, because I love to.</p>
+							</div>
+							<h3>Do you write you own songs?</h3>
+							<div>
+								<p>Yes, and I write for other artists as well!</p>
+							</div>
+							<h3>Where can I listen to your old stuff?</h3>
+							<div>
+								<p>Easy! <a href="/past" class="btn"><span><i style="color:black;"class="fa fa-hand-o-left"></i></span></a></p>
+							</div>
+							<h3>Still have more questions? </h3>
+							<div>
+								<p><a href="/future" class="btn"><span><i style="color:black;" class="fa fa-hand-o-right"></i></span></a></p></p>
+							</div>
+
+                        </div>
+                        
+
+
+                       
                     </div>
                 </div>
             </div>
@@ -70,11 +103,11 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
+                    <h2 class="section-heading">New Sonez Stuff:</h2>
+                    	<p class="lead"> Check out Bullet new on Sonez Soundcloud</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
+                    <img class="img-responsive" src="img/bullet.jpg" alt="">
                 </div>
             </div>
 
@@ -84,7 +117,7 @@
     </div>
     <!-- /.content-section-a -->
 
-    <div class="content-section-b">
+<!--     <div class="content-section-b">
 
         <div class="container">
 
@@ -101,12 +134,14 @@
             </div>
 
         </div>
-        <!-- /.container -->
+        
 
-    </div>
+    </div> -->
+
+
     <!-- /.content-section-b -->
 
-    <div class="content-section-a">
+    <!-- <div class="content-section-a">
 
         <div class="container">
 
@@ -122,7 +157,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!-- /.container -->
 
     </div>
@@ -134,20 +169,17 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect to Start Bootstrap:</h2>
+                <div class="col-lg-8">
+                    <h2 class="section-heading">Follow Sonez</h2>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                        </li>
+                         <li>
+                                <a href="https://www.instagram.com/singformesonia/" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                            </li>
+                            <li>
+                                <a href="https://soundcloud.com/iamsonez" class="btn btn-default btn-lg"><i class="fa fa-soundcloud fa-fw"></i> <span class="network-name">SoundCloud</span></a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -163,7 +195,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="list-inline">
+                    <!-- <ul class="list-inline">
                         <li>
                             <a href="#">Home</a>
                         </li>
@@ -179,8 +211,8 @@
                         <li>
                             <a href="#contact">Contact</a>
                         </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+                    </ul> -->
+                    <p class="copyright text-muted small">Copyright &copy; Sonez </p>
                 </div>
             </div>
         </div>
@@ -188,6 +220,26 @@
 $(document).ready(function() {
 	$('li').removeClass('active');
 	$('#present_li').addClass('active');
+
+	
+
+	$('#faq_button').click(function() {
+		$('#faq_img').toggleClass('fa-sort-desc fa-sort-asc') 
+		$('#faqs_container').toggle();
+
+		if($('#faqs_container').is(":visible"))
+		{
+		  $('#faqs_container h3').each(function() {
+		var tis = $(this), state = false, answer = tis.next('div').hide().css('height','auto').slideUp();
+		tis.click(function() {
+			state = !state;
+			answer.slideToggle(state);
+			tis.toggleClass('active',state);
+		});
+	});
+		}
+		
+	});
 });
 </script>
 {% endblock %}
