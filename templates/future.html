@@ -26,12 +26,13 @@
 
 <form id="form" class="topBefore">
 		
-		  <input style="color:white;" id="name" type="text" placeholder="NAME">
-		  <input style="color:white;" id="email" type="text" placeholder="E-MAIL">
-		  <textarea style="color:white;" id="message" type="text" placeholder="MESSAGE"></textarea>
-  <input id="submit" type="submit" value="GO!">
+		  <input style="color:white;" name="name" id="name" type="text" placeholder="NAME">
+		  <input style="color:white;" name="email" id="email" type="text" placeholder="E-MAIL">
+		  <textarea style="color:white;" name="message" id="message" type="text" placeholder="MESSAGE"></textarea>
+  		  <input readonly id="submit" value="GO!">
   
 </form>
+<h3 id="response_email" style="color:white;display:none;" class="about booking" style="color:white;"></h3>
 </div>
 
 <footer class="future-footer">
@@ -64,6 +65,27 @@
 $(document).ready(function() {
 	$('li').removeClass('active');
 	$('#future_li').addClass('active');
+
+	$('#submit').click(function() {
+		$.ajax({
+			type: "POST",
+			url: "/email",
+			data: {
+				'name' : $('#name').val(),
+				'email' : $('#email').val(),
+				'message' : $('#message').val()
+			},
+			success: function (response) {
+				$('#response_email').html("Message Sent!").show();
+			},
+			error: function (jqXHR, exception) {
+				$('#response_email').html("Error Sending Message.. Please Try Again Later").show();
+			} 
+		})
+	});
+
 });
+
+
 </script>
 {% endblock %}
