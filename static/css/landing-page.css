@@ -60,6 +60,22 @@ h3 {
     min-height: 45em;
 }
 
+.past-header {
+    text-align: center;
+    color: #f8f8f8;
+    /*background: url(../img/geobackground.jpg) no-repeat center center;*/
+    background-size: cover;
+    background-color: #826aa0;  
+    padding-bottom: 15%; 
+}
+
+.past-footer {
+    /*background: url(../img/geobackground.jpg) no-repeat center center;*/
+    background-size: cover;
+    background-color: #826aa0; 
+    color: white;  
+}
+
 .intro-message {
     position: relative;
     padding-top: 15%;
@@ -191,6 +207,15 @@ footer {
 
 p.copyright {
     margin: 15px 0 0;
+}
+
+.spotify-title {
+    color: #4e5152;
+}
+
+.spotify-player {
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 /*FAQS*/
