@@ -1,8 +1,64 @@
 {% extends "base.html" %}
 {% block title %}Sonez{% endblock %}
+{% block head %}
+<link href="css/email-form.css" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
-<h1>Sonez Future</h1>
+<div class="future-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+<h1>Contact</h1>
+</div>
+
+      <hr class="intro-divider">
+              <h3 class="about booking"> For booking and inquiries please fill out the email form below</h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="content-section-a" style="background-color:black">
+<header>Send to Sonez</header>
+
+<form id="form" class="topBefore">
+		
+		  <input style="color:white;" id="name" type="text" placeholder="NAME">
+		  <input style="color:white;" id="email" type="text" placeholder="E-MAIL">
+		  <textarea style="color:white;" id="message" type="text" placeholder="MESSAGE"></textarea>
+  <input id="submit" type="submit" value="GO!">
+  
+</form>
+</div>
+
+<footer class="future-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul> -->
+                    <p class="copyright small">Copyright &copy; Sonez </p>
+                </div>
+            </div>
+        </div>
 
 <script>
 $(document).ready(function() {
