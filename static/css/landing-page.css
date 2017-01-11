@@ -236,13 +236,21 @@ p.copyright {
     color: white;
 }
 
-.spotify-title {
-    color: #4e5152;
+
+
+.center {
+    text-align: center;
+    padding-left: 15em;
+    padding-right: 15em;
 }
 
 .spotify-player {
     padding-top: 5%;
     padding-bottom: 5%;
+}
+
+.link-white {
+    color: white;
 }
 
 /*FAQS*/
