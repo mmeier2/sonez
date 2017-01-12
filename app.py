@@ -1,3 +1,7 @@
+import os
+import sys
+sys.path.insert(0, '/home/iamsonez/public_html/sonez/sonez/lib/python2.7/site-packages')
+
 from flask import Flask, render_template, request
 import smtplib
 from email.mime.text import MIMEText
@@ -40,7 +44,3 @@ def send_email():
 	s = smtplib.SMTP('smtpout.secureserver.net')
 	s.sendmail(SONEZ, ME, msg.as_string())
 	s.quit()
-
-
-if __name__ == '__main__':
-	app.run()
