@@ -44,3 +44,6 @@ def send_email():
 	s = smtplib.SMTP('smtpout.secureserver.net')
 	s.sendmail(SONEZ, ME, msg.as_string())
 	s.quit()
+
+if __name__ == '__main__':
+	app.run()
