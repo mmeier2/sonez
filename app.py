@@ -25,7 +25,8 @@ def future():
 EMAIL_MESSAGE = "Message from iamsonez.com\n \
 				 name: {0}\n \
 				 email: {1}\n \
-				 message: {2}"
+				 subject: {2}\n \
+				 message: {3}"
 
 ME = 'mmeier@eng.ucsd.edu'
 SONEZ = 'iamsonez.com'
@@ -33,7 +34,8 @@ SONEZ = 'iamsonez.com'
 @app.route('/email', methods=['POST'])
 def send_email():
 	msg = EMAIL_MESSAGE.format(request.form.get("name"), 
-							   request.form.get("email"), 
+							   request.form.get("email"),
+							   request.form.get("subject"), 
 							   request.form.get("message"))
 
 	msg = MIMEText(msg)

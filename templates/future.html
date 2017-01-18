@@ -57,7 +57,7 @@
                             <a href="#contact">Contact</a>
                         </li>
                     </ul> -->
-                    <p class="copyright small">Copyright &copy; Sonez </p>
+                    <!-- <p class="copyright small">Copyright &copy; Sonez </p> -->
                 </div>
             </div>
         </div>
@@ -69,23 +69,38 @@ $(document).ready(function() {
     $('body').addClass('future-background');
 
 	$('#submit').click(function() {
-		$.ajax({
-			type: "POST",
-			url: "/email",
-			data: {
-				'name' : $('#name').val(),
-				'email' : $('#email').val(),
-				'message' : $('#message').val()
-			},
-			success: function (response) {
-				$('#response_email').html("Your message has been sent to Sonez. Thanks for your inquiry!").show();
-                $('#form').addClass('hidden')
 
-			},
-			error: function (jqXHR, exception) {
-				$('#response_email').html("Error Sending Message.. Please Try Again Later").show();
-			} 
-		})
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var subject = $('#subject').val();
+        var message = $('#message').val();
+
+        if(name == "" || email == "" || subject == "" || message == "")
+        {
+            $('#response_email').html("Please fill out all fields!").show();
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: "/email",
+                data: {
+                    'name' : name,
+                    'email' : email,
+                    'message' : message,
+                    'subject' : subject
+                },
+                success: function (response) {
+                    $('#response_email').html("Your message has been sent to Sonez. Thanks for your inquiry!").show();
+                    $('#form').addClass('hidden')
+
+                },
+                error: function (jqXHR, exception) {
+                    $('#response_email').html("Error Sending Message.. Please Try Again Later").show();
+                } 
+            })
+        }
+
+
 	});
 
 });
