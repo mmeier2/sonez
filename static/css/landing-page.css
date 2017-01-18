@@ -32,6 +32,9 @@ h3 {
     text-transform: uppercase;
 }
 
+.heading {
+    border-bottom: none;
+}
 
 .about {
     text-align: center;

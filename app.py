@@ -41,7 +41,7 @@ def send_email():
 	msg['To'] = ME
 	msg['From'] = SONEZ
 
-	s = smtplib.SMTP('smtpout.secureserver.net')
+	s = smtplib.SMTP_SSL('smtpout.secureserver.net', '465')
 	s.sendmail(SONEZ, ME, msg.as_string())
 	s.quit()
 
