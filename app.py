@@ -39,7 +39,7 @@ def send_email():
 							   request.form.get("message"))
 
 	msg = MIMEText(msg)
-	msg['Subject'] = 'Inquiry: {0}'.format(request.form.get("subject"))
+	msg['Subject'] = 'Sonez Inquiry - {0}'.format(request.form.get("subject"))
 	msg['To'] = ME
 	msg['From'] = SONEZ
 
