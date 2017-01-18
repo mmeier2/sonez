@@ -2,6 +2,7 @@
 {% block title %}Sonez{% endblock %}
 {% block head %}
 <!--     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">     --> <!-- this is lagging hard -->
+<link rel="stylesheet" href="css/sc-player-standard.css" type="text/css">
  {% endblock %}
 
 {% block content %}
@@ -12,31 +13,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Sonez</h1>
+                        <h1 class="heading">Sonez</h1>
                         
       </div>
-                        <!-- <h3>Bullet</h3> -->
-
-     
-      
-
-<!-- <div class="row col-md-8 col-md-offset-2 col-xs-12">
-   <audio controls
-	data-info-album-art="img/bullet.jpg"
-	data-info-album-title="8874"
-	data-info-artist="Sonez"
-	data-info-title="Bullet"
-	data-info-year="2016">
-	 <source src="mp3/Bullet Mix Session V1.mp3" type="audio/mpeg" /> -->
-	<!-- <a href="mp3/Bullet Mix Session V1.mp3">Bullet</a> -->
-<!-- </audio> -->
-    <!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  -->
-    <!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  -->
-<!-- /row -->
-    <!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  -->
-    <!-- ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  -->
-
-                  
+                        
 
         <hr class="intro-divider">
         <h3 class ="about booking"> living life and making music </h3>
@@ -56,47 +36,6 @@
                                     </a>
                             </li>
                         </ul>
-<!--         <h3 class ="about"> Hey there! Thanks for checking out my website. I figure you might not know a lot about me, so here are some FAQs: </h3>
-        	<ul class="list-inline intro-social-buttons">
-                            <li >
-                                <a id="faq_button" style="padding-right:1em; padding-left:1em;"class="btn btn-default btn-lg"><span><i id="faq_img" class="fa fa-sort-desc"></i></span></a>
-                            </li>
-                        </ul> -->
-
-                    <!--     <div class="about" id="faqs_container" style="display:none">
-                        	<h3>Who are you?</h3>
-							<div>
-								<p>I am Sonez.</p>
-							</div>
-							<h3>Where are you from?</h3>
-							<div>
-								<p>Born and raised in Ohio, now living that West Coast life ;)</p>
-							</div>
-							<h3>What do you do?</h3>
-							<div>
-								<p>I work in finance by day and make music at night.</p>
-							</div>
-							<h3>Why do you make music?</h3>
-							<div>
-								<p>Simple, because I love to.</p>
-							</div>
-							<h3>Do you write you own songs?</h3>
-							<div>
-								<p>Yes, and I write for other artists as well!</p>
-							</div>
-							<h3>Where can I listen to your old stuff?</h3>
-							<div>
-								<p>Easy! <a href="/past" class="btn"><span><i style="color:black;"class="fa fa-hand-o-left"></i></span></a></p>
-							</div>
-							<h3>Still have more questions? </h3>
-							<div>
-								<p><a href="/future" class="btn"><span><i style="color:black;" class="fa fa-hand-o-right"></i></span></a></p></p>
-							</div>
-
-                        </div> -->
-                        
-
-
                        
                     </div>
                 </div>
@@ -116,7 +55,13 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">New From Sonez</h2>
-                          <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/299487632&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                       <div class="row soundcloud-player"> 
+                           
+                    <a href="https://soundcloud.com/iamsonez" class="sc-player">Sonez</a>
+                    
+                </div>
+
+                          
             </div>
 
 
@@ -155,6 +100,7 @@
 $(document).ready(function() {
 	$('li').removeClass('active');
 	$('#present_li').addClass('active');
+    $('body').addClass('present-background');
 
 	
 
@@ -176,7 +122,12 @@ $(document).ready(function() {
 		
 	});
 });
+
+
 </script>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="js/soundcloud.player.api.js"></script>
+<script type="text/javascript" src="js/sc-player.js"></script>
 {% endblock %}
 <!-- <title>Present</title>
 <h1>Present</h1> -->
