@@ -78,7 +78,7 @@ $(document).ready(function() {
 				'message' : $('#message').val()
 			},
 			success: function (response) {
-				$('#response_email').html("Message Sent!").show();
+				$('#response_email').html("Your message has been sent to Sonez. Thanks for your inquiry!").show();
 			},
 			error: function (jqXHR, exception) {
 				$('#response_email').html("Error Sending Message.. Please Try Again Later").show();
