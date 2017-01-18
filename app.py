@@ -22,10 +22,10 @@ def future():
 	return render_template('future.html')
 
 
-EMAIL_MESSAGE = "Name: {0}\n\
-Email Address: {1}\n\
-Subject: {2}\n\
-Message: {3}"
+EMAIL_MESSAGE = "<b>Name:</b> {0}\n\
+<b>Email Address:</b> {1}\n\
+<b>Subject:</b> {2}\n\
+<b>Message:</b> {3}"
 
 ME = 'mmeier@eng.ucsd.edu'
 SONEZ = 'iamsonez.com'
