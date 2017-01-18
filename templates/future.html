@@ -75,11 +75,17 @@ $(document).ready(function() {
         var subject = $('#subject').val();
         var message = $('#message').val();
 
+        var spinner = '<i class="fa fa-spinner fa-spin fa-fw"></i><span class="sr-only">Loading...</span>';
+
+        $('#response_email').html(spinner).show();
+
         if(name == "" || email == "" || subject == "" || message == "")
         {
             $('#response_email').html("Please fill out all fields!").show();
         }
         else {
+            $('#form').addClass('hidden')
+
             $.ajax({
                 type: "POST",
                 url: "/email",
@@ -91,11 +97,10 @@ $(document).ready(function() {
                 },
                 success: function (response) {
                     $('#response_email').html("Your message has been sent to Sonez. Thanks for your inquiry!").show();
-                    $('#form').addClass('hidden')
-
                 },
                 error: function (jqXHR, exception) {
                     $('#response_email').html("Error Sending Message.. Please Try Again Later").show();
+                    $('#form').removeClass('hidden')
                 } 
             })
         }
