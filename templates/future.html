@@ -79,6 +79,11 @@ $(document).ready(function() {
 			},
 			success: function (response) {
 				$('#response_email').html("Your message has been sent to Sonez. Thanks for your inquiry!").show();
+                $('#name').val('')
+                $('#email').val('')
+                $('#subject').val('')
+                $('#message').val('')
+
 			},
 			error: function (jqXHR, exception) {
 				$('#response_email').html("Error Sending Message.. Please Try Again Later").show();
